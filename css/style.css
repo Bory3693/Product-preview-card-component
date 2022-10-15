@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+
+	font-family: 'Montserrat', sans-serif;
+	background: hsl(30, 38%, 92%);
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+main {
+	max-width: 1440px;
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 1rem;
+}
+
+.container {
+	max-width: 37.5rem;
+	/* margin: 2rem auto; */
+	background: hsl(0, 0%, 100%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0.1875rem 0.25rem 0.875rem rgba(18, 19, 17, 0.03);
+	border-radius: 0.9375rem;
+	overflow: hidden;
+}
+
+.container:hover .product-photo,
+.container:hover .product-photo-mobile {
+	transform: scale(1.1);
+}
+
+.images {
+	overflow: hidden;
+	max-width: 50%;
+	min-height: 100%;
+}
+
+.container .product-photo {
+	max-width: 100%;
+	object-fit: cover;
+	border-top-left-radius: 0.9375rem;
+	border-bottom-left-radius: 0.9375rem;
+}
+
+.container .product-photo-mobile {
+	display: none;
+}
+
+.content-text {
+	max-width: 50%;
+	padding: 2rem;
+}
+
+.content-text span:first-of-type {
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 0.875rem;
+	color: hsl(228, 12%, 48%);
+}
+
+.content-text h1 {
+	font-family: 'Fraunces', serif;	
+	line-height: 1.8rem;
+	font-weight: 700;
+	margin: 1.5rem 0;
+}
+
+.content-text p {
+	color: hsl(228, 12%, 48%);
+	font-size: 0.875rem;
+	line-height: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.content-text .price .new-price {
+	color: hsl(158, 36%, 37%);
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	font-family: 'Fraunces', serif;	
+	margin-right: 1rem;
+}
+
+.content-text .price .old-price {
+	color: hsl(228, 12%, 48%);
+	text-decoration: line-through;
+	font-size: 0.875rem;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	background: hsl(158, 36%, 37%);
+	color: hsl(0, 0%, 100%);
+	font-size: 0.875rem;
+	text-align: center;
+	padding: 1rem 0.5rem;
+	border-radius: 0.5rem;
+	transition: all 0.3s linear;
+}
+
+.btn:hover {
+	background: hsl(212, 21%, 14%);
+}
+
+.btn img {
+	margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+/*__________MEDIA QUERIES__________*/
+
+
+@media (max-width: 620px) {
+
+	main {
+		padding: 3rem 1.5rem;
+		
+	}
+
+	.container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 5rem 3rem;
+		
+	}
+
+	.container .product-photo  {
+		display: none;
+	}
+
+	.container .product-photo-mobile {
+		max-width: 100%;
+		max-height: 420px;
+		display: block;
+		object-fit: cover;
+		border-top-left-radius: 0.9375rem;
+		border-top-right-radius: 0.9375rem;
+	}
+
+	.images,
+	.content-text {
+		max-width: 100%;
+	}
+
+	.content-text {
+		padding: 1.2rem;
+	}
+	
+	.content-text .price .new-price  {
+		font-size: 1.5rem;
+	}
+}
